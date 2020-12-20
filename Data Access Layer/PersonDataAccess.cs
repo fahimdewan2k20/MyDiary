@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyDiary.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -24,6 +25,13 @@ namespace MyDiary.Data_Access_Layer
                 return true;
             else
                 return false;
+        }
+
+        public int AddNewPerson(Person person)
+        {
+            string sql = "INSERT INTO Persons(PersonName, Password) VALUES('"+person.PersonName+"', '"+person.Password+"')";
+            int result = dataAccess.ExecuteQuery(sql);
+            return result;
         }
     }
 }

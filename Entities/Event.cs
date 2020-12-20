@@ -15,6 +15,6 @@ namespace MyDiary.Entities
         public DateTime Time { get; set; }
         public DateTime LastModification { get; set; }
         public char Importance { get; set; }
-        public string Picture { get; set; }
+        public string PictureName { get; set; }
     }
 }

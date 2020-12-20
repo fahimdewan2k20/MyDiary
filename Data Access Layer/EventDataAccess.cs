@@ -31,10 +31,71 @@ namespace MyDiary.Data_Access_Layer
                 e.Details = reader["Details"].ToString();
                 e.Time = Convert.ToDateTime(reader["Time"].ToString());
                 e.LastModification = Convert.ToDateTime(reader["LastModification"].ToString());
-                e.Picture = reader["PictureName"].ToString();
+                e.Importance = Convert.ToChar(reader["Importance"]);
+                e.PictureName = reader["PictureName"].ToString();
                 events.Add(e);
             }
             return events;
+        }
+
+        public Event GetEvent(int id)
+        {
+            string sql = "SELECT * FROM Events WHERE Id='+id+'";
+            SqlDataReader reader = dataAccess.GetData(sql);
+            reader.Read();
+            Event e = new Event();
+            e.Id = (int)reader["Id"];
+            e.PersonName = reader["PersonName"].ToString();
+            e.Title = reader["Title"].ToString();
+            e.Details = reader["Details"].ToString();
+            e.Time = Convert.ToDateTime(reader["Time"].ToString());
+            e.LastModification = Convert.ToDateTime(reader["LastModification"].ToString());
+            e.Importance = Convert.ToChar(reader["Importance"]);
+            e.PictureName = reader["PictureName"].ToString();
+            return e;
+        }
+
+        public int AddEvent(Event e)
+        {
+            string sql = "INSERT INTO Events(PersonName, Title, Details, Importance, PictureName) Values('"+e.PersonName+"', '"+e.Title+"', '"+e.Details+"', '"+e.Importance+"', '"+e.PictureName+"')";
+            int result = dataAccess.ExecuteQuery(sql);
+            return result;
+        }
+
+        public int ModifyEvent(Event e)
+        {
+            string sql = "UPDATE Events SET Title=" + e.Title + ", Details=" + e.Details + ", Importance=" + e.Importance + ", LastModification="+ DateTime.Now +" PictureName=" + e.PictureName + " WHERE Id=" + e.Id;
+            int result = dataAccess.ExecuteQuery(sql);
+            return result;
+        }
+
+        public int DeleteEvent(int id)
+        {
+            string sql = "DELETE FROM Events WHERE Id=" + id;
+            int result = dataAccess.ExecuteQuery(sql);
+            return result;
+        }
+
+        public List<Event> GetEventForSearch(string title)
+        {
+            string sql = "SELECT * FROM Events WHERE Title LIKE '" + title + "%'";
+            SqlDataReader reader = dataAccess.GetData(sql);
+            List<Event> events = new List<Event>();
+            while (reader.Read())
+            {
+                Event e = new Event();
+                e.Id = (int)reader["Id"];
+                e.PersonName = reader["PersonName"].ToString();
+                e.Title = reader["Title"].ToString();
+                e.Details = reader["Details"].ToString();
+                e.Time = Convert.ToDateTime(reader["Time"].ToString());
+                e.LastModification = Convert.ToDateTime(reader["LastModification"].ToString());
+                e.Importance = Convert.ToChar(reader["Importance"]);
+                e.PictureName = reader["PictureName"].ToString();
+                events.Add(e);
+            }
+            return events;
+
         }
     }
 }

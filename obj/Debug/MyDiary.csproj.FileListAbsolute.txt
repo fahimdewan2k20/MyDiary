@@ -8,3 +8,5 @@ D:\My Projects\C#_DotNet\Windows Form App\MyDiary\obj\Debug\MyDiary.csproj.Gener
 D:\My Projects\C#_DotNet\Windows Form App\MyDiary\obj\Debug\MyDiary.csproj.CoreCompileInputs.cache
 D:\My Projects\C#_DotNet\Windows Form App\MyDiary\obj\Debug\MyDiary.exe
 D:\My Projects\C#_DotNet\Windows Form App\MyDiary\obj\Debug\MyDiary.pdb
+D:\My Projects\C#_DotNet\Windows Form App\MyDiary\obj\Debug\MyDiary.Presentation_Layer.Home.resources
+D:\My Projects\C#_DotNet\Windows Form App\MyDiary\obj\Debug\MyDiary.Presentation_Layer.Registration.resources
