@@ -38,13 +38,14 @@ namespace MyDiary
                 PersonService ps = new PersonService();
                 if(ps.LoginValidation(personName, password))
                 {
-                    Home home = new Home();
+                    Home home = new Home(personName);
                     home.Show();
                     this.Hide();
                 }
                 else
                 {
                     MessageBox.Show("username or password doesn't match");
+                    passwordTextBox.Text = "";
                 }
             }
             

@@ -13,8 +13,8 @@ namespace MyDiary.Entities
         public string Title { get; set; }
         public string Details { get; set; }
         public DateTime Time { get; set; }
-        public DateTime LastModification { get; set; }
-        public char Importance { get; set; }
+        public string LastModification { get; set; }
+        public byte Importance { get; set; }
         public string PictureName { get; set; }
     }
 }

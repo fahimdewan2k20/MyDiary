@@ -32,7 +32,18 @@ namespace MyDiary.Presentation_Layer
 
         private void createBtn_Click(object sender, EventArgs e)
         {
-            if(passwordTextBox.Text == confirmPasswordBox.Text)
+            if(nameTextBox.Text == "")
+            {
+                MessageBox.Show("Name cannot be empty");
+                return;
+            }
+            if(passwordTextBox.Text != confirmPasswordBox.Text || passwordTextBox.Text.Length<5)
+            {
+                MessageBox.Show("password doesn't match or less than 5 character");
+                passwordTextBox.Text = "";
+                confirmPasswordBox.Text = "";
+            }
+            else
             {
                 PersonService ps = new PersonService();
                 int result = ps.AddNewPerson(nameTextBox.Text, passwordTextBox.Text);
@@ -43,12 +54,10 @@ namespace MyDiary.Presentation_Layer
                     lf.Show();
                     this.Hide();
                 }
-            }
-            else
-            {
-                MessageBox.Show("password doesn't match");
-                passwordTextBox.Text = "";
-                confirmPasswordBox.Text = "";
+                else
+                {
+                    MessageBox.Show("Name already exists .. please try another one");
+                }
             }
         }
     }

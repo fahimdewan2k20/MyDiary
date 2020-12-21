@@ -32,6 +32,8 @@
             this.leftPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rightPanel = new System.Windows.Forms.Panel();
+            this.additionalHeaderLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.createDiaryBtn = new System.Windows.Forms.Button();
             this.headerLabel = new System.Windows.Forms.Label();
             this.loginPanel = new System.Windows.Forms.Panel();
@@ -40,8 +42,6 @@
             this.passwordLabel = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.additionalHeaderLabel = new System.Windows.Forms.Label();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.rightPanel.SuspendLayout();
@@ -96,6 +96,25 @@
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(400, 600);
             this.rightPanel.TabIndex = 2;
+            // 
+            // additionalHeaderLabel
+            // 
+            this.additionalHeaderLabel.AutoSize = true;
+            this.additionalHeaderLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.additionalHeaderLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.additionalHeaderLabel.Location = new System.Drawing.Point(97, 139);
+            this.additionalHeaderLabel.Name = "additionalHeaderLabel";
+            this.additionalHeaderLabel.Size = new System.Drawing.Size(207, 22);
+            this.additionalHeaderLabel.TabIndex = 7;
+            this.additionalHeaderLabel.Text = "Save all yours memories";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel1.Location = new System.Drawing.Point(0, 174);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(400, 4);
+            this.panel1.TabIndex = 6;
             // 
             // createDiaryBtn
             // 
@@ -191,25 +210,6 @@
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "Name";
             this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panel1.Location = new System.Drawing.Point(0, 174);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 4);
-            this.panel1.TabIndex = 6;
-            // 
-            // additionalHeaderLabel
-            // 
-            this.additionalHeaderLabel.AutoSize = true;
-            this.additionalHeaderLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.additionalHeaderLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.additionalHeaderLabel.Location = new System.Drawing.Point(98, 139);
-            this.additionalHeaderLabel.Name = "additionalHeaderLabel";
-            this.additionalHeaderLabel.Size = new System.Drawing.Size(207, 22);
-            this.additionalHeaderLabel.TabIndex = 7;
-            this.additionalHeaderLabel.Text = "Save all yours memories";
             // 
             // LoginForm
             // 

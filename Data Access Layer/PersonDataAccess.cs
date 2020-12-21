@@ -29,7 +29,13 @@ namespace MyDiary.Data_Access_Layer
 
         public int AddNewPerson(Person person)
         {
-            string sql = "INSERT INTO Persons(PersonName, Password) VALUES('"+person.PersonName+"', '"+person.Password+"')";
+            string sql = "SELECT * FROM Persons WHERE PersonName='"+person.PersonName+"'";
+            SqlDataReader reader = dataAccess.GetData(sql);
+            if (reader.Read())
+            {
+                return 0;
+            }
+            sql = "INSERT INTO Persons(PersonName, Password) VALUES('"+person.PersonName+"', '"+person.Password+"')";
             int result = dataAccess.ExecuteQuery(sql);
             return result;
         }
