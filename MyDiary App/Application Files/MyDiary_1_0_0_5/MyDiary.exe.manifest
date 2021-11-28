@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MyDiary.exe" version="1.0.0.5" publicKeyToken="782e49d6a16510b4" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="diary.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MyDiary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MyDiary.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MyDiary.exe" size="2871304">
+      <assemblyIdentity name="MyDiary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>C59qfV0+nl5AzEHf+mSzGCg4nl4hPKDHInQMPn5/z5g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="diary.ico" size="8217">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RqZF7k2OVwebQfp7tc9aCS/jPaMjsKco1RrljHZWqXc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MyDiary.exe.config" size="377">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>csN0l3T2w6PTZIVGXZWju2Yw8idg/DNZwps29oVjVbc=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-C712RA3\Fahim Uddin" issuerKeyHash="d77510f312b832df5cd8ab9b2227d55ce253d46b" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>h/K3F54s40cfs8OyZ67xah42xAVoM9Rs2yIAdZvyDW0=</DigestValue></Reference></SignedInfo><SignatureValue>IWtEFe0OBLFzqjAhn56xxOPfc+TfI4j7JW/QkRlUe/ASNL4as1L6/ToaPM/UFKZmRPRrZDQcqAeCnO+Zf+crRwhzxFSX8jsaXsEfwlTtz3MnqeNjqsfK9npdIHQuBeUfgLL9fuikxYp62b5pR/8RxKlYm4BQyX8fNO8Rmg6SsQo=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>6cDTwRGylNH9zhIiP0huR2+gFXSI0kGaTNzXwwNKBZ9J/s37JdTUJI2K8x8evIQRkVYpKcmiDxZEUy6O5+AUX0ra1ZpwGMzXnzie0WBOTlkFMgHh6OjlVcs4kS1RP00r6PgU20+ohw4Ea0YrTWjYpnxscYQo9GCcBc8VGsKV2m0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="6d0df29b750022db6cd4336805c4361e6af1ae67b2c3b31f47e32c9e17b7f287" Description="" Url=""><as:assemblyIdentity name="MyDiary.exe" version="1.0.0.5" publicKeyToken="782e49d6a16510b4" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-C712RA3\Fahim Uddin</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Gxc1HHTfn0hFKeHVqaHbVYgmQ9Q2ys1XOZ9/MAnWplE=</DigestValue></Reference></SignedInfo><SignatureValue>HMi3pRGcQXCl6uMhQqs4C7CZ9bFaDU/iCSDCuKMsoiLwy7VZxu+lIoUdE8xPXw549FeBPrzBCfGPc/kuCajMei5NxcKFHjQdBJG+eRi3/AIceIGL5pMmIWexWUEcK/vZJHUTHt/sBDZJuvom51zRm7LMBZNrfNx5r2UXN2QW0fU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>6cDTwRGylNH9zhIiP0huR2+gFXSI0kGaTNzXwwNKBZ9J/s37JdTUJI2K8x8evIQRkVYpKcmiDxZEUy6O5+AUX0ra1ZpwGMzXnzie0WBOTlkFMgHh6OjlVcs4kS1RP00r6PgU20+ohw4Ea0YrTWjYpnxscYQo9GCcBc8VGsKV2m0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICBTCCAW6gAwIBAgIQRt6U9jS56pBFUlg7WefnVjANBgkqhkiG9w0BAQsFADBBMT8wPQYDVQQDHjYARABFAFMASwBUAE8AUAAtAEMANwAxADIAUgBBADMAXABGAGEAaABpAG0AIABVAGQAZABpAG4wHhcNMjAxMjIxMTgzNzM2WhcNMjExMjIyMDAzNzM2WjBBMT8wPQYDVQQDHjYARABFAFMASwBUAE8AUAAtAEMANwAxADIAUgBBADMAXABGAGEAaABpAG0AIABVAGQAZABpAG4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAOnA08ERspTR/c4SIj9IbkdvoBV0iNJBmkzc18MDSgWfSf7N+yXU1CSNivMfHryEEZFWKSnJog8WRFMujufgFF9K2tWacBjM1584ntFgTk5ZBTIB4ejo5VXLOJEtUT9NK+j4FNtPqIcOBGtGK01o2KZ8bHGEKPRgnAXPFRrCldptAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAGWT09h5jvSi7VYwda9VP9OmROUDmjk8rJVsvQr/W7tzTicG6sP7vN3gIPP6/Lf3uYICQotnSJE50cj3IsVVn2gSc2T+z6ouhnkGWGyhf1bK3QNbd+O+xmG4O+PF8L1n8Ju3sbsFdo0swZuBYiddR+G8dn6KAKUD4SyleYyu3Odg=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

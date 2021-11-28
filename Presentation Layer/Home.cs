@@ -30,6 +30,8 @@ namespace MyDiary.Presentation_Layer
             this.removeEventBtn.Click += RefreshEvents;
             this.closeBtn.Click += this.EventPanel_Click;
             this.doneBtn.Click += this.EventPanel_Click;
+            this.ExitBtn.MouseEnter += ExitBtn_MouseEnter;
+            this.ExitBtn.MouseLeave += ExitBtn_MouseLeave;
         }
 
         void RefreshEvents(Object o, EventArgs e)
@@ -37,7 +39,6 @@ namespace MyDiary.Presentation_Layer
             this.allEventsPanel.Controls.Clear();
             EventService eventService = new EventService();
             List<Event> allEventsList = eventService.GetEventList(this.personName);
-            int i = 1;
             int startingRowPosition = 0;
             int startingColumnPosition = 0;
             foreach(Event ev in allEventsList)
@@ -53,7 +54,7 @@ namespace MyDiary.Presentation_Layer
                 // 
                 if (ev.Importance == 2)
                 {
-                    calenderLabel.BackColor = System.Drawing.Color.Red;
+                    calenderLabel.BackColor = System.Drawing.Color.Crimson;
                 }
                 else if (ev.Importance == 1)
                 {
@@ -106,7 +107,7 @@ namespace MyDiary.Presentation_Layer
                 eventPanel.Controls.Add(calenderLabel);
                 eventPanel.BackColor = System.Drawing.Color.Transparent;
                 eventPanel.Location = new System.Drawing.Point(startingRowPosition, startingColumnPosition);
-                eventPanel.Name = "eventPanel" + i++;
+                eventPanel.Name = "eventPanel";
                 eventPanel.Size = new System.Drawing.Size(250, 50);
                 eventPanel.TabIndex = 4;
                 startingColumnPosition += 50;
@@ -171,15 +172,15 @@ namespace MyDiary.Presentation_Layer
                 this.eventPanel.BackColor = System.Drawing.Color.Transparent;
             }
             eventDetailsLabel.Text = selectedEvent.Details;
-            if (selectedEvent.PictureName != "")
-            {
-                this.pictureBox.Image = new Bitmap(selectedEvent.PictureName);
-                this.pictureBox.Visible = true;
-            }
-            else
+            if (selectedEvent.PictureName == "" || selectedEvent.PictureName == null)
             {
                 this.pictureBox.Image = null;
                 this.pictureBox.Visible = false;
+            }
+            else
+            {
+                this.pictureBox.Image = new Bitmap(selectedEvent.PictureName);
+                this.pictureBox.Visible = true;
             }
             this.eventPanel.BackColor = System.Drawing.Color.Silver;
             this.addEventPanel.Visible = false;
@@ -192,8 +193,9 @@ namespace MyDiary.Presentation_Layer
         {
             this.done = this.addEventBtn;
             this.addEventPanel.Visible = true;
-            this.buttonsPanel.Enabled = true;
+            this.buttonsPanel.Enabled = false;
             this.allEventsPanel.Enabled = false;
+            //this.pictureBox.Visible = false;
             this.pictureBox.Visible = false;
             /*this.eventTitleLabel.Text = "";
             this.timeLabel.Text = "";
@@ -207,7 +209,7 @@ namespace MyDiary.Presentation_Layer
         {
             this.done = this.modifyEventBtn;
             this.addEventPanel.Visible = true;
-            this.buttonsPanel.Enabled = true;
+            this.buttonsPanel.Enabled = false;
             this.allEventsPanel.Enabled = false;
             this.pictureBox.Visible = false;
             /*this.eventTitleLabel.Text = "";
@@ -326,12 +328,22 @@ namespace MyDiary.Presentation_Layer
         private void addImageBtn_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png" ;
             if (open.ShowDialog() == DialogResult.OK)
             {
                 this.pictureName = open.FileName;
                 this.pictureNameLabel.Text = "Picture: " + open.FileName;
             }
+        }
+
+        private void ExitBtn_MouseEnter(object sender, EventArgs e)
+        {
+            this.ExitBtn.ForeColor = System.Drawing.Color.Crimson;
+        }
+
+        private void ExitBtn_MouseLeave(object sender, EventArgs e)
+        {
+            this.ExitBtn.ForeColor = System.Drawing.Color.White;
         }
     }
 }

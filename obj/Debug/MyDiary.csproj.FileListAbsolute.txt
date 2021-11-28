@@ -10,3 +10,7 @@ D:\My Projects\C#_DotNet\Windows Form App\MyDiary\obj\Debug\MyDiary.exe
 D:\My Projects\C#_DotNet\Windows Form App\MyDiary\obj\Debug\MyDiary.pdb
 D:\My Projects\C#_DotNet\Windows Form App\MyDiary\obj\Debug\MyDiary.Presentation_Layer.Home.resources
 D:\My Projects\C#_DotNet\Windows Form App\MyDiary\obj\Debug\MyDiary.Presentation_Layer.Registration.resources
+D:\My Projects\C#_DotNet\Windows Form App\MyDiary\bin\Debug\MyDiary.exe.manifest
+D:\My Projects\C#_DotNet\Windows Form App\MyDiary\bin\Debug\MyDiary.application
+D:\My Projects\C#_DotNet\Windows Form App\MyDiary\obj\Debug\MyDiary.exe.manifest
+D:\My Projects\C#_DotNet\Windows Form App\MyDiary\obj\Debug\MyDiary.application

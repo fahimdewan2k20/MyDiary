@@ -42,6 +42,7 @@ namespace MyDiary.Presentation_Layer
             this.rightPanel = new System.Windows.Forms.Panel();
             this.eventDetailsPanel = new System.Windows.Forms.Panel();
             this.addEventPanel = new System.Windows.Forms.Panel();
+            this.pictureNameLabel = new System.Windows.Forms.Label();
             this.closeBtn = new System.Windows.Forms.Button();
             this.importanceComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@ namespace MyDiary.Presentation_Layer
             this.logoutBtn = new System.Windows.Forms.Button();
             this.eventTitleLabel = new System.Windows.Forms.Label();
             this.ExitBtn = new System.Windows.Forms.Button();
-            this.pictureNameLabel = new System.Windows.Forms.Label();
             this.leftPanel.SuspendLayout();
             this.buttonsPanel.SuspendLayout();
             this.rightPanel.SuspendLayout();
@@ -83,9 +83,9 @@ namespace MyDiary.Presentation_Layer
             // 
             // allEventsPanel
             // 
+            this.allEventsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.allEventsPanel.AutoScroll = true;
             this.allEventsPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.allEventsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.allEventsPanel.Location = new System.Drawing.Point(0, 137);
             this.allEventsPanel.Name = "allEventsPanel";
             this.allEventsPanel.Size = new System.Drawing.Size(250, 463);
@@ -106,11 +106,11 @@ namespace MyDiary.Presentation_Layer
             // 
             // importanceBtn
             // 
+            this.importanceBtn.BackColor = System.Drawing.Color.Transparent;
             this.importanceBtn.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.importanceBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.importanceBtn.Enabled = false;
             this.importanceBtn.FlatAppearance.BorderSize = 0;
-            this.importanceBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.importanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.importanceBtn.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.importanceBtn.ForeColor = System.Drawing.Color.White;
@@ -120,7 +120,7 @@ namespace MyDiary.Presentation_Layer
             this.importanceBtn.Size = new System.Drawing.Size(50, 50);
             this.importanceBtn.TabIndex = 7;
             this.importanceBtn.Text = "I";
-            this.importanceBtn.UseVisualStyleBackColor = true;
+            this.importanceBtn.UseVisualStyleBackColor = false;
             // 
             // modifyEventBtn
             // 
@@ -146,7 +146,6 @@ namespace MyDiary.Presentation_Layer
             this.removeEventBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.removeEventBtn.Enabled = false;
             this.removeEventBtn.FlatAppearance.BorderSize = 0;
-            this.removeEventBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.removeEventBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removeEventBtn.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeEventBtn.ForeColor = System.Drawing.Color.White;
@@ -164,7 +163,6 @@ namespace MyDiary.Presentation_Layer
             this.addEventBtn.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.addEventBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.addEventBtn.FlatAppearance.BorderSize = 0;
-            this.addEventBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple;
             this.addEventBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEventBtn.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEventBtn.ForeColor = System.Drawing.Color.White;
@@ -229,6 +227,16 @@ namespace MyDiary.Presentation_Layer
             this.addEventPanel.Size = new System.Drawing.Size(550, 463);
             this.addEventPanel.TabIndex = 2;
             this.addEventPanel.Visible = false;
+            // 
+            // pictureNameLabel
+            // 
+            this.pictureNameLabel.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pictureNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pictureNameLabel.Location = new System.Drawing.Point(20, 423);
+            this.pictureNameLabel.Name = "pictureNameLabel";
+            this.pictureNameLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.pictureNameLabel.Size = new System.Drawing.Size(510, 40);
+            this.pictureNameLabel.TabIndex = 5;
             // 
             // closeBtn
             // 
@@ -340,7 +348,7 @@ namespace MyDiary.Presentation_Layer
             this.pictureBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox.Location = new System.Drawing.Point(0, 463);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(550, 275);
+            this.pictureBox.Size = new System.Drawing.Size(550, 329);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox.TabIndex = 1;
             this.pictureBox.TabStop = false;
@@ -348,12 +356,12 @@ namespace MyDiary.Presentation_Layer
             // 
             // eventDetailsLabel
             // 
-            this.eventDetailsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eventDetailsLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.eventDetailsLabel.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventDetailsLabel.Location = new System.Drawing.Point(0, 0);
             this.eventDetailsLabel.Name = "eventDetailsLabel";
             this.eventDetailsLabel.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.eventDetailsLabel.Size = new System.Drawing.Size(550, 738);
+            this.eventDetailsLabel.Size = new System.Drawing.Size(550, 197);
             this.eventDetailsLabel.TabIndex = 0;
             // 
             // rightTopPanel
@@ -432,6 +440,7 @@ namespace MyDiary.Presentation_Layer
             // 
             this.ExitBtn.BackColor = System.Drawing.Color.Transparent;
             this.ExitBtn.FlatAppearance.BorderSize = 0;
+            this.ExitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitBtn.ForeColor = System.Drawing.Color.White;
@@ -442,16 +451,6 @@ namespace MyDiary.Presentation_Layer
             this.ExitBtn.Text = "X";
             this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
-            // 
-            // pictureNameLabel
-            // 
-            this.pictureNameLabel.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pictureNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pictureNameLabel.Location = new System.Drawing.Point(20, 423);
-            this.pictureNameLabel.Name = "pictureNameLabel";
-            this.pictureNameLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.pictureNameLabel.Size = new System.Drawing.Size(510, 40);
-            this.pictureNameLabel.TabIndex = 5;
             // 
             // Home
             // 

@@ -19,7 +19,7 @@ namespace MyDiary.Data_Access_Layer
 
         public List<Event> GetAllEvents(string personName)
         {
-            string sql = "SELECT * FROM Events WHERE PersonName='"+ personName +"' ORDER BY Importance DESC";
+            string sql = "SELECT * FROM Events WHERE PersonName='"+ personName + "' ORDER BY Importance DESC, Time DESC";
             SqlDataReader reader = dataAccess.GetData(sql);
             List<Event> events = new List<Event>();
             while (reader.Read())
